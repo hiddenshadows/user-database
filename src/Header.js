@@ -16,7 +16,7 @@ function Header() {
           </Nav>
           <Nav>
             <Button href="login" variant="outline-light" className="mx-2" >Login</Button>{' '}
-            <Button href="login" variant="warning">Sign Up</Button>
+            <Button href="register" variant="warning">Sign Up</Button>
           </Nav>
         </Container>
       </Navbar>
