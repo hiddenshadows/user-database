@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import { auth, db, logout } from "../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import Tasks from "../Tasks";
 
 /*
 Unlike the other components, there’s something else we are doing here. 
@@ -33,14 +34,17 @@ function Dashboard() {
   }, [user, loading]);
   return (
     <div className="dashboard">
-       <div className="dashboard__container">
+      <div>
+        <Tasks/>
+      </div>
+      <footer className="dashboard__container">
         Logged in as
          <div>{name}</div>
          <div>{user?.email}</div>
          <button className="dashboard__btn" onClick={logout}>
           Logout
          </button>
-       </div>
+       </footer>
      </div>
   );
 }
